@@ -1,9 +1,9 @@
-export default function Item(name, quantity, category) {
+export default function Item({item}) {
     return (
         <ul>
-            <li>{name}</li>
-            <li>{quantity}</li>
-            <li>{category}</li>
+            <li>{item.name}</li>
+            <li>{item.quantity}</li>
+            <li>{item.category}</li>
         </ul>
     );
 }
