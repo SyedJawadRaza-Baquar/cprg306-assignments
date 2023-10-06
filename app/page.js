@@ -10,6 +10,7 @@ export default function Page() {
     <nav className="text-decoration-line: underline">
     <li><Link href="/week2">Week-2</Link></li>
     <li><Link href="/week3">Week-3</Link></li>
+    <li><Link href="/week4">Week-4</Link></li>
     </nav>
     </ul>
     </main>
