@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <main className="flex-grow :1 w-25 h-25 px-4 py-2 m-4 text-red-600 text-xl text-center font-bold bg-gray-400 rounded border-blue-800">
+    <main className="flex w-screen h-screen justify-center items-center px-4 py-2 m-4 text-red-600 text-xl font-bold bg-gray-400 rounded border-blue-800">
     <h1>CPRG 306: Web Development 2 - Assignments</h1>
     <StudentInfo />
     <ul>
