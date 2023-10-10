@@ -13,18 +13,17 @@ export default function NewItem(){
             quantity: quantity,
             category: category
         };
-        const { name, quantity, category } = item;
         console.log(item);
-        alert(item);
+        alert(JSON.stringify(item));
         setName("");
         setQuantity(1);
         setCategory("produce");
     };
 
     return(
-        <form>
+        <form className="flex-col justify-center items-center">
             <label htmlFor="name">Name</label>
-            <input
+            <input className="flex-1"
                 id="name"
                 type="text"
                 value={name}
@@ -32,7 +31,7 @@ export default function NewItem(){
                 onChange={(event) => setName(event.target.value)}
             />
             <label htmlFor="quantity">Quantity</label>
-            <input
+            <input className="flex-1"
                 id="quantity"
                 type="number"
                 value={quantity}
@@ -42,7 +41,7 @@ export default function NewItem(){
                 onChange={(event) => setQuantity(parseInt(event.target.value))}
             />
             <label htmlFor="category">Category</label>
-            <select
+            <select className="flex-1"
                 id="category"
                 value={category}
                 onChange={(event) => setCategory(event.target.value)}
@@ -59,7 +58,7 @@ export default function NewItem(){
                 <option value="household">Household</option>
                 <option value="other">Other</option>
             </select>
-            <button onClick={handleSubmit} type="submit">Submit</button>
+            <button className="flex-1" onClick={handleSubmit} type="submit">Submit</button>
         </form>
     );
 }
