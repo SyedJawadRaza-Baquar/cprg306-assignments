@@ -21,7 +21,7 @@ export default function NewItem(){
     };
 
     return(
-        <form className="flex-col justify-center items-center">
+        <form className="flex flex-col justify-center items-center">
             <label htmlFor="name">Name</label>
             <input className="flex-1"
                 id="name"
