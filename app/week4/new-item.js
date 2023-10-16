@@ -21,8 +21,8 @@ export default function NewItem(){
     };
 
     return(
-        <form className="flex flex-col gap-4 justify-center items-center bg-slate-800 rounded border-blue-800">
-            <div className="flex-1"><label htmlFor="name">Name</label>
+        <form className="flex flex-col gap-4 bg-slate-800 rounded border-blue-800">
+            <div><label htmlFor="name">Name</label>
                 <input 
                     id="name"
                     type="text"
@@ -31,7 +31,7 @@ export default function NewItem(){
                     onChange={(event) => setName(event.target.value)}
                 />
             </div>
-            <div className="flex-1">
+            <div>
                 <label htmlFor="quantity">Quantity</label>
                 <input 
                     id="quantity"
@@ -43,9 +43,9 @@ export default function NewItem(){
                     onChange={(event) => setQuantity(parseInt(event.target.value))}
                 />
             </div>
-            <div className="flex-1">
+            <div>
                 <label htmlFor="category">Category</label>
-                <select className="flex-1"
+                <select
                     id="category"
                     value={category}
                     onChange={(event) => setCategory(event.target.value)}
@@ -63,7 +63,7 @@ export default function NewItem(){
                     <option value="other">Other</option>
                 </select>
             </div>
-            <button className="flex-1 bg-zinc-600 border-blue-800 rounded-lg" onClick={handleSubmit} type="submit">Submit</button>
+            <button className= "bg-zinc-600 border-blue-800 rounded-lg" onClick={handleSubmit} type="submit">Submit</button>
         </form>
     );
 }
