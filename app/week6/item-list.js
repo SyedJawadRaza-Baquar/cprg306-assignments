@@ -4,11 +4,11 @@ import Item from "./item";
 
 export default function ItemList({items}) {
   const [sortBy, setSortBy] = useState("name");
-  items.sort((a, b) => (a[sortBy] > b[sortBy]) ? 1 : -1);
+  const sortedItems = [...items].sort((a, b) => (a[sortBy] > b[sortBy]) ? 1 : -1);
 
       return(
         <>
-        {items.map((item) => (
+        {sortedItems.map((item) => (
             <Item key={item.id} item = {item} />
         ))}
         <div className="flex justify-between mx-80 ">
