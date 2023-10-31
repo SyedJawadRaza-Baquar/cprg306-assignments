@@ -14,7 +14,7 @@ export default function Page() {
         setItems([...items, item]);
     }
     const handleItemSelect = (itemName) => {
-        const cleanedItemName = itemName.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|�[�-�]|�[�-�]|[\u2011-\u26FF]|�[�-�])/g, '');
+        const cleanedItemName = itemName.replace(/[^a-z\s]+$/i, ' ').trim().split(',')[0].replace(' ', '_');
         console.log("Selected item: ", cleanedItemName);
         setSelectedItemName(cleanedItemName);
     }
