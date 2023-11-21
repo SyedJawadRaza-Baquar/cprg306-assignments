@@ -29,7 +29,7 @@ export default function Page() {
             {user ? (
                 <div>
                     <p>Welcome, {user.displayName} ({user.email})</p>
-                    <div><Link href="/week8/shopping-list">Shopping List</Link></div>
+                    <div><Link href="/week10/shopping-list">Shopping List</Link></div>
                     <button className="bg-zinc-600 border-blue-800 rounded-lg" onClick={handleSignOut}>Sign Out</button>
                 </div>
             ) : (
