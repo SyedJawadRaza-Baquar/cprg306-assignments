@@ -3,7 +3,9 @@ import MealIdeas from "./meal-ideas";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import itemsData from "./items.json";
+import { useUserAuth } from "../_utils/auth-context";
 import { useState } from "react";
+import { redirect } from "next/navigation";
 
 export default function Page() {
 
